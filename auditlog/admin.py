@@ -18,7 +18,7 @@ class LogEntryAdmin(admin.ModelAdmin, LogEntryAdminMixin):
     readonly_fields = ["created", "resource_url", "action", "user_url", "msg"]
     fieldsets = [
         (None, {"fields": ["created", "user_url", "resource_url"]}),
-        ("Changes", {"fields": ["action", "msg"]}),
+        ("Changes", {"fields": ["action", "msg", "additional_data"]}),
     ]
 
 
